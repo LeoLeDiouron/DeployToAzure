@@ -2,12 +2,14 @@ var express = require('express');
 var router = express.Router();
 
 var ctrlMain = require('../controllers/ctrlMain');
-var ctrlFootball = require('../controllers/ctrlFootball');
-var ctrlGoldenBall = require('../controllers/ctrlGoldenBall');
+var ctrlGDP = require('../controllers/ctrlGDP');
+var ctrlPopulation = require('../controllers/ctrlPopulation');
+var ctrlGDPPerHab = require('../controllers/ctrlGDPPerHab')
 
 /* GET home page. */
 router.get('/', ctrlMain.index);
-router.get('/football', ctrlFootball.winnerlist);
-router.get('/goldenball', ctrlGoldenBall.winnerlist);
+router.get('/gdp', ctrlGDP.countries);
+router.get('/population', ctrlPopulation.countries);
+router.get('/gdpperhab', ctrlGDPPerHab.countries);
 
 module.exports = router;

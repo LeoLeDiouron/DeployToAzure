@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1='TOP 10 of countries by G.D.P in 2017'
+    ul
+        each country in countries
+            li=country.rank + '. ' + country.country + ' : ' + country.gdp + ' billions of $'

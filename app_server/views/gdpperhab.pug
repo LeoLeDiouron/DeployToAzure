@@ -2,7 +2,8 @@ extends layout
 
 block content
     div.ml-5.mb-5.mr-5.mt-5
-        h1='TOP 10 of countries by G.D.P per habitant in 2017'
+        h1(class="text-primary")='TOP 10 of countries by G.D.P per habitant in 2017'
+        p Click on a country to see its Wikipedia page
         div(class="list-group")
             each country in countries
                 a(href="https://en.wikipedia.org/wiki/"+country.country,class="list-group-item list-group-item-action")=country.rank + '. ' + country.country + ' : ' + country.gdpPerHab + ' $'

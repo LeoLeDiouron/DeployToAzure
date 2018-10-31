@@ -27,7 +27,7 @@ db.gdb_per_hab.save([
 
 db.population.save([
     {country:'China',population:'1,381',rank:'1'},
-    {country:'India',population:'1 347',rank:'2'},
+    {country:'India',population:'1,347',rank:'2'},
     {country:'United States',population:'327',rank:'3'},
     {country:'Indonesia',population:'264',rank:'4'},
     {country:'Brazil',population:'207',rank:'5'},

@@ -12,7 +12,7 @@ db.gdp.save([
     {country:'France',gdp:'2,835',rank:'10'},
 ]);
 
-db.gdb_per_hab.save([
+db.gdp_per_hab.save([
     {country:'Qatar',gdpPerHab:'124,927',rank:'1'},
     {country:'Macau',gdpPerHab:'114,430',rank:'2'},
     {country:'Luxembourg',gdpPerHab:'109,192',rank:'3'},

@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    div.ml-5.mb-5.mr-5.mt-5
+        h1(class="text-primary")='Add a new country in the section "Population"'
+        form(action="",method="post")
+            .form-group.row
+                label Country
+                    input.form-control(name="country")
+            .form-group.row
+                label Population (in millions of habitants)
+                    input.form-control(name="population")
+            .form-group.row
+                label Rank
+                    input.form-control(name="rank")
+            .form-group.row
+                button.btn-primary Add

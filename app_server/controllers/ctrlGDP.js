@@ -1,6 +1,34 @@
 const request = require('request');
 const apiURL = require('./apiURLs');
 
+const showForm = function(req, res) {
+    res.render('gdp_add');
+}
+
+const addData = function(req, res) {
+    const path = '/api/gdp';
+
+    const post_data = {
+        country: req.body.country,
+        gdp: req.body.gdp,
+        rank: req.body.rank
+    };
+
+    const request_options = {
+        url: apiURL.server + path,
+        method: 'POST',
+        json: post_data
+    };
+
+    request(request_options, function(err, response) {
+        if (response.statusCode === 201)
+            res.redirect('/gdp');
+        else {
+            res.render('error', {message: 'Error adding data: ' + response.statusMessage + ' (' + response.statusCode + ')'});
+        }
+    });
+}
+
 const countries = function(req,res) {
     const path = '/api/gdp';
     const requestOptions = {
@@ -26,5 +54,7 @@ const countries = function(req,res) {
 }
 
 module.exports = {
-    countries
+    countries,
+    showForm,
+    addData
 };

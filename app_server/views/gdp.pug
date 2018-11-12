@@ -7,3 +7,4 @@ block content
         div(class="list-group")
             each country in countries
                 a(href="https://en.wikipedia.org/wiki/"+country.country,class="list-group-item list-group-item-action")=country.rank + '. ' + country.country + ' : ' + country.gdp + ' billions of $'
+        a(href="/gdp/add") Add a new country in the section "GDP"

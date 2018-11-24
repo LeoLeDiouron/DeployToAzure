@@ -7,4 +7,9 @@ block content
         div(class="list-group")
             each country in countries
                 a(href="https://en.wikipedia.org/wiki/"+country.country,class="list-group-item list-group-item-action")=country.rank + '. ' + country.country + ' : ' + country.gdpPerHab + ' $'
+                form(action="/gdpperhab/delete",method="post")
+                    .form-group.row
+                        input.form-control(name="country",type="hidden",value=country.country)
+                    .form-group.row
+                        button.btn-primary Delete
         a(href="/gdpperhab/add") Add a new country in the section "GDP per habitant"

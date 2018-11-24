@@ -18,13 +18,25 @@ router
     .post(ctrlPopulation.addData);
 
 router
+    .route('/population/delete')
+    .post(ctrlPopulation.deleteData);
+
+router
     .route('/gdp/add')
     .get(ctrlGDP.showForm)
     .post(ctrlGDP.addData);
 
 router
+    .route('/gdp/delete')
+    .post(ctrlGDP.deleteData);
+
+router
     .route('/gdpperhab/add')
     .get(ctrlGDPPerHab.showForm)
     .post(ctrlGDPPerHab.addData);
+
+router
+    .route('/gdpperhab/delete')
+    .post(ctrlGDPPerHab.deleteData);
 
 module.exports = router;

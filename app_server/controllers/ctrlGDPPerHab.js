@@ -5,6 +5,29 @@ const showForm = function(req, res) {
     res.render('gdpperhab_add');
 }
 
+const deleteData = function(req, res) {
+    const path = '/api/gdp_per_hab/delete';
+
+    const delete_data = {
+        country: req.body.country
+    };
+
+    const request_options = {
+        url: apiURL.server + path,
+        method: 'POST',
+        json: delete_data
+    };
+
+    request(request_options, function(err, response) {
+        if (response.statusCode === 200) {
+            countries(req, res);
+        }
+        else {
+            res.render('error', {message: 'Error delete datas'});
+        }
+    });
+}
+
 const addData = function(req, res) {
     const path = '/api/gdp_per_hab';
 
@@ -56,5 +79,6 @@ const countries = function(req,res) {
 module.exports = {
     countries,
     showForm,
-    addData
+    addData,
+    deleteData
 };

@@ -23,7 +23,19 @@ const addCountry = function(req, res) {
     })
 };
 
+const deleteCountry = function(req, res) {
+    gdp_per_hab.deleteOne(req.body, function(err) {
+        if (err) {
+            res.status(400).json(err);
+        }
+        else {
+            res.status(200).json(err);
+        }
+    });
+}
+
 module.exports = {
     listCountries,
-    addCountry
+    addCountry,
+    deleteCountry
 }

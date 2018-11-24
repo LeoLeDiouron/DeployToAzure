@@ -1,3 +1,4 @@
+db.dropDatabase();
 
 db.gdp.save([
     {country:'China',gdp:'23,159',rank:'1'},

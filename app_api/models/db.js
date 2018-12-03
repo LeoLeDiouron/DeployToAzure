@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const db_uri = "mongodb://LeoLD:5gzqk9uo@ds119663.mlab.com:19663/countries_stats";
+const pwd = "";
+const db_uri = "mongodb://LeoLD:" + pwd + "@ds119663.mlab.com:19663/countries_stats";
 
 mongoose.connect(db_uri);
 
